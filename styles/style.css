@@ -20,10 +20,10 @@ body {
   font-family: Helvetica, sans-serif;
   font-weight: lighter;
   text-align: center;
-  padding-top: 50px;
-  min-height: 400px;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  padding-top: 5vh; /* Ajusté en fonction de la hauteur de la fenêtre */
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  min-height: 50vh;
 }
 
 h1 {
@@ -53,7 +53,7 @@ li span {
 
 .giftbox {
   position: absolute;
-  width: 300px;
+  width: 20vw; /* Utilisation de vw pour rendre la boîte responsive */
   height: 200px;
   left: 50%;
   margin-left: -150px;
@@ -355,5 +355,164 @@ li span {
     width: 20px;
     height: 20px;
     top: 35px;
+  }
+}
+/* Responsive adjustments for 620x980 */
+@media (max-width: 620px) {
+  .container {
+    padding-top: 20px; /* Ajustement du padding */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1rem; /* Taille du texte légèrement réduite pour l'écran */
+  }
+
+  li {
+    font-size: 1.2em; /* Taille du texte dans les listes ajustée */
+    padding: 0.8em;
+  }
+
+  li span {
+    font-size: 3.5rem; /* Taille des chiffres ajustée */
+  }
+
+  .giftbox {
+    width: 85%; /* La boîte cadeau occupe 85% de la largeur */
+    height: auto;
+    margin-left: -42.5%; /* Centrage de la boîte cadeau */
+    bottom: 20px; /* Ajustement de l'espace en bas */
+  }
+
+  .giftbox:after {
+    font-size: 20px; /* Ajustement de la taille de la police pour le texte "Click Me!" */
+  }
+
+  .emojis {
+    width: 120px; /* Taille des emojis ajustée pour l'écran plus grand */
+    height: 120px;
+  }
+
+  .emojis .eye {
+    width: 30px; /* Taille des yeux des emojis ajustée */
+    height: 30px;
+    left: 20px;
+    top: 35px; /* Positionnement des yeux ajusté */
+  }
+
+  .emojis .eye:nth-child(2) {
+    left: 75px; /* Ajustement de l'espacement entre les yeux */
+  }
+
+  .emojis .smile {
+    width: 35px; /* Taille du sourire augmentée */
+    height: 35px;
+    top: 65px; /* Positionnement du sourire ajusté */
+  }
+}
+/* Responsive adjustments for 100x500 */
+@media (max-width: 100px) {
+  .container {
+    padding-top: 10px; /* Réduction du padding pour ajuster à l'espace très limité */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 0.5rem; /* Réduction significative de la taille de la police */
+  }
+
+  li {
+    font-size: 0.6em; /* Réduction de la taille du texte des listes */
+    padding: 0.2em;
+  }
+
+  li span {
+    font-size: 1rem; /* Taille des chiffres dans les listes considérablement réduite */
+  }
+
+  .giftbox {
+    width: 90%; /* La boîte cadeau occupe presque toute la largeur */
+    height: auto;
+    margin-left: -45%; /* Centrage de la boîte cadeau */
+    bottom: 10px; /* Moins d'espace en bas pour utiliser toute la hauteur possible */
+  }
+
+  .giftbox:after {
+    font-size: 10px; /* Ajustement de la taille de la police pour le texte "Click Me!" */
+  }
+
+  .emojis {
+    width: 40px; /* Taille des emojis considérablement réduite */
+    height: 40px;
+  }
+
+  .emojis .eye {
+    width: 8px; /* Taille des yeux réduite */
+    height: 8px;
+    left: 5px;
+    top: 10px; /* Ajustement du positionnement des yeux */
+  }
+
+  .emojis .eye:nth-child(2) {
+    left: 25px; /* Réduction de l'espacement entre les yeux */
+  }
+
+  .emojis .smile {
+    width: 10px; /* Réduction de la taille du sourire */
+    height: 10px;
+    top: 25px; /* Ajustement du positionnement du sourire */
+  }
+}
+/*        */
+/* Responsive adjustments for 1091x500 */
+@media (max-width: 1091px) and (max-height: 500px) {
+  .container {
+    padding-top: 20px; /* Réduction légère du padding pour compenser la hauteur limitée */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.2rem; /* Taille de texte légèrement réduite */
+  }
+
+  li {
+    font-size: 1.2em; /* Taille du texte des listes optimisée */
+    padding: 0.8em;
+  }
+
+  li span {
+    font-size: 3rem; /* Ajustement de la taille des chiffres dans les listes */
+  }
+
+  .giftbox {
+    width: 60%; /* La boîte cadeau occupe une bonne partie de la largeur sans être trop grande */
+    height: auto;
+    margin-left: -30%; /* Centrage de la boîte cadeau */
+    bottom: 20px; /* Ajustement de l'espace en bas */
+  }
+
+  .giftbox:after {
+    font-size: 22px; /* Texte "Click Me!" plus petit pour s'adapter à la hauteur limitée */
+  }
+
+  .emojis {
+    width: 100px; /* Taille des emojis modérément réduite pour s'adapter à la hauteur limitée */
+    height: 100px;
+  }
+
+  .emojis .eye {
+    width: 25px; /* Taille des yeux légèrement réduite */
+    height: 25px;
+    left: 20px;
+    top: 30px;
+  }
+
+  .emojis .eye:nth-child(2) {
+    left: 60px;
+  }
+
+  .emojis .smile {
+    width: 30px; /* Taille du sourire légèrement réduite */
+    height: 30px;
+    top: 60px; /* Ajustement du positionnement du sourire */
+  }
+
+  /* Optional adjustments for larger screens */
+  h1 {
+    font-size: 2rem; /* Légère réduction de la taille des titres pour s'adapter à la hauteur */
   }
 }
